@@ -7,7 +7,7 @@ const { env } = process;
 
 export const nodeEnv = env.NODE_ENV || 'development';
 export default {
-    port: env.PORT || 12000,
+    port: env.PORT || 3000,
     secretKey: env.SECRET_KEY
 };
 // Config mongo database
