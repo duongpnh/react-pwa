@@ -14,7 +14,10 @@ delete window.__PRELOADED_STATE__;
 const store = createStore(appReducers, preloadedState, applyMiddleware(thunk));
 
 const renderRouter = Component => {
-  ReactDOM.hydrate(
+  // Resolved warning: Expected server HTML to contain a matching <div> in <div>.
+  const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate;
+
+  return renderMethod(
       <Provider store={store}>
         <Router>
           <Component />

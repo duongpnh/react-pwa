@@ -23,7 +23,22 @@ self.addEventListener('message', e => {
     }
 })
 
-self.addEventListener('activate', e => console.log('Activated'));
+self.addEventListener('activate', e => {
+    console.log('Activated');
+    // Remove unwanted caches
+    e.waitUntil(
+        caches.keys().then(cacheNames => {
+            return Promise.all(
+                cacheNames.map(cache => {
+                    if (cache !== cacheName) {
+                        console.log('Clearing old cache');
+                        return caches.delete(cache);
+                    }
+                })
+            )
+        })
+    )
+});
 
 self.addEventListener('fetch', e => {
     console.log('Fetching');
