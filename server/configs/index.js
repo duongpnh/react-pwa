@@ -7,12 +7,11 @@ const { env } = process;
 
 export const nodeEnv = env.NODE_ENV || 'development';
 export default {
-    port: env.PORT || 3000,
+    port: env.PORT || 12000,
     secretKey: env.SECRET_KEY
 };
 // Config mongo database
-// const mongoDB = 'mongodb://192.168.88.181:27017/fullstack';
-const mongoDB = 'mongodb+srv://pnhduong:12110116@cluster0-euugq.mongodb.net/fullstack?retryWrites=true&w=majority'
+const mongoDB = 'mongodb://192.168.88.181:27017/fullstack';
 mongoose.connect(mongoDB, {
     useNewUrlParser: true,
     useCreateIndex: true

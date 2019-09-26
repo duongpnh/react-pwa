@@ -4,10 +4,10 @@
   "description": "",
   "private": "true",
   "scripts": {
-    "start": "webpack --config webpack.prod.js && node ./server/run.js",
+    "start": "node ./server/run.js",
     "start:dev": "nodemon -r esm ./server/run.js",
     "build:dev": "webpack-dev-server --config webpack.dev.js --open google-chrome",
-    "build": "webpack --config webpack.prod.js && node ./server/run.js"
+    "build": "node ./server/run.js"
   },
   "keywords": [],
   "author": "",

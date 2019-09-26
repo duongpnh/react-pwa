@@ -34,4 +34,6 @@ server.use('/api-v1/categories', categoryRouter);
 server.use('/api-v1/posts', postRouter);
 server.get('*', renderRouterMiddleware);
 
-server.listen(process.env.PORT || config.port, () => console.log('Express listen on port ', config.port))
+server.listen(config.port, () => {
+    console.log('Express listen on port ', config.port);
+})
