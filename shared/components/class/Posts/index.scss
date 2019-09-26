@@ -9,6 +9,15 @@
         .d-posts-left-new-subject {
             background: map-get($map: $color, $key: primary);
             padding: 1rem;
+            h3 {
+                color: map-get($map: $color, $key: textPrimaryH3);
+            }
+            a {
+                color: map-get($map: $color, $key: textReadMore);
+            }
+            a:hover {
+                color: map-get($map: $color, $key: textHover);
+            }
         }
         .d-posts-left-new-subject img {
             position: relative;
@@ -25,25 +34,29 @@
             li:not(:last-child) {
                 margin: 0 0 0.5rem 0;
             }
-        }
-        ul > li {
-            list-style: none;
-            display: flex;
-            align-items: center;
-            background: map-get($map: $color, $key: primary);
-        }
-        ul li .LazyLoad {
-            max-width: 30%;
-            padding: 1rem;
-        }
-        ul li .LazyLoad img {
-            max-width: 100%;
-        }
-        ul li p {
-            max-width: 70%;
-        }
-        ul li p a {
-            font-size: 0.8rem;
+            li {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                background: map-get($map: $color, $key: primary);
+                .LazyLoad {
+                    max-width: 30%;
+                    padding: 1rem;
+                    img {
+                        max-width: 100%;
+                    }
+                }
+                p {
+                    max-width: 70%;
+                }
+                a {
+                    font-size: 0.8rem;
+                    color: map-get($map: $color, $key: textReadMore);
+                }
+                a:hover {
+                    color: map-get($map: $color, $key: textHover);
+                }
+            }
         }
     }
 }

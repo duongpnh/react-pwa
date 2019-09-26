@@ -3,7 +3,10 @@ import './index.scss';
 
 const FooterComponent = () => (
     <footer className="d-footer">
-        <p>Danny &copy; 2019</p>
+        <div>
+            <span>Thanks for watching my Blog</span>
+            <p>Danny &copy; 2019</p>
+        </div>
     </footer>
 );
 export default FooterComponent;

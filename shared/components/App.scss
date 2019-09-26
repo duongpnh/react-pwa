@@ -7,8 +7,11 @@ $color: (
     textHover: #042A2B,
     darkPrimary: #F1F2F3,
     superBlack: #000000,
-    textPrimary: #265C00,
-    descriptionTextColor: #555555
+    textPrimaryH1: rgba(38, 92, 0, 1),
+    textPrimaryH3: rgba(38, 92, 0, 1),
+    textPrimaryH4: rgba(38, 92, 0, 0.8),
+    descriptionTextColor: #555555,
+    textReadMore: #68A225
 );
 body {
     margin: 0;

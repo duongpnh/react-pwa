@@ -12,11 +12,13 @@ const RemainPosts = (props) => {
                             <LazyLoad>
                                 <img src={post.image} alt=""/>
                             </LazyLoad>
-                            <p>
-                                <Link arial-label="Details Post" to={`/categories/${post.category_id}/posts/${post._id}/details`}>
-                                    {post.title}
-                                </Link>
-                            </p>
+                            <p>{post.title}</p>
+                            <Link 
+                                arial-label="Details Post" 
+                                to={`/categories/${post.category_id}/posts/${post._id}/details`}
+                            >
+                                Read more
+                            </Link>
                         </li>
                     ))
                 }

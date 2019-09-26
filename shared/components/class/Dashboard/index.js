@@ -24,11 +24,10 @@ class Dashboard extends Component {
                             </div>
                             <div className="details">
                                 <h1>
-                                    <Link arial-label="Home Page Newest Posts" to={`/categories/${newestPosts[0].category_id}/posts/${newestPosts[0]._id}/details`}>
-                                        {newestPosts && newestPosts[0].title}
-                                    </Link>
+                                    {newestPosts && newestPosts[0].title}
                                 </h1>
                                 <p>{newestPosts && newestPosts[0].description}</p>
+                                <Link arial-label="Details Post" to={`/categories/${newestPosts[0].category_id}/posts/${newestPosts[0]._id}/details`} className="btn">Read More</Link>
                             </div>
                         </header>
                         <div className="d-top-box">

@@ -18,11 +18,13 @@ class Posts extends React.Component {
                     <div className="d-posts-left">
                         <div className="d-posts-left-new-subject">
                             <img src={newPost ? newPost.image : ''} alt=""/>
-                            <h3>
-                                <Link arial-label="Details Post" to={`/categories/${newPost.category_id}/posts/${newPost ? newPost._id : ''}/details`}>
-                                    {newPost ? newPost.title : ''}
-                                </Link>
-                            </h3>
+                            <h3>{newPost ? newPost.title : ''}</h3>
+                            <Link 
+                                arial-label="Details Post" 
+                                to={`/categories/${newPost.category_id}/posts/${newPost ? newPost._id : ''}/details`}
+                            >
+                                Read more
+                            </Link>
                         </div>
                     </div>
                     <div className="d-posts-right">

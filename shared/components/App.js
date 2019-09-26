@@ -5,8 +5,8 @@ import ContentComponent from './class/Content';
 import './App.scss';
 import SideDrawer from './class/SideDrawer';
 import BackDrop from './class/BackDrop';
-import {getCategories, getCates} from '../actions/categories';
-// import FooterComponent from './class/Footer';
+import {getCategories} from '../actions/categories';
+import FooterComponent from './class/Footer';
 import FlashScreen from './functional/FlashScreen';
 
 class App extends React.Component {
@@ -49,13 +49,13 @@ class App extends React.Component {
                     <main style={{marginTop: '64px'}}>
                         <ContentComponent />
                     </main>
+                    <FooterComponent />
                 </React.Fragment>;
         }
 
         return (
             <div style={{height: '100%'}}>
                     {app}
-                    {/* <FooterComponent /> */}
             </div>
         );
     }
