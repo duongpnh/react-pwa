@@ -4,7 +4,7 @@
 <img src="markdown-imgs/redux.png" width="120">
 <img src="markdown-imgs/nodejs-icon.png" width="100">
 <img src="markdown-imgs/webpack.png" width="250">
-<img src="markdown-imgs/pwa.png" width="100">
+<img src="markdown-imgs/pwa.png" width="150">
 
 Build project base on:
 1. Back-end: NodeJS.
