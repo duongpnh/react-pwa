@@ -6,7 +6,7 @@
   "engines": {
     "node": "12.4.0",
     "npm": "6.10.0",
-    "yarn": "1.18.0"
+    "yarn": "1.17.3"
   },
   "scripts": {
     "start": "webpack --config webpack.dev.js && node ./server/run.js",
