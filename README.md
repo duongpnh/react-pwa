@@ -1,4 +1,11 @@
 # Fullstack NodeJS ReactJS
+
+<img src="markdown-imgs/react.png" width="100">
+<img src="markdown-imgs/redux.png" width="120">
+<img src="markdown-imgs/nodejs-icon.png" width="100">
+<img src="markdown-imgs/webpack.png" width="250">
+<img src="markdown-imgs/pwa.png" width="100">
+
 Build project base on:
 1. Back-end: NodeJS.
 2. Front-end: ReactJS.
@@ -12,7 +19,7 @@ Step 1: <code>cd react-pwa</code>
 
 Step 2: <code>npm install</code> or <code>yarn</code> to install package in <b>package.json</b>
 
-Step 3: <code>npm start</code> to webpack bundle react code to js code and start node server.
+Step 3: <code>npm start</code> or <code>yarn start</code> to webpack bundle react code to js code and start node server.
 
 Step 4: You need to prepare mongo DB. You can use mongo DB on cloud: https://cloud.mongodb.com or you can use mongo image: https://hub.docker.com/_/mongo to run in evironment docker.
 
