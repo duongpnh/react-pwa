@@ -18,6 +18,13 @@ server.use(cors({
 server.use(express.json());
 // Support URL encoded in request body
 server.use(express.urlencoded({ extended: false }));
+server.use((req, res, next) => {
+    if (!/https/.test(req.protocol)) {
+        res.redirect(`https://${req.headers.host}${req.url}`);
+    } else {
+        return next();
+    }
+})
 server.use('/api-v1', router);
 // server.use('/api-v1/users', userRouter);
 // Make sure file in public folder working
@@ -27,7 +34,7 @@ server.use('/', expressStaticGzip('public', {
     orderPreference: ['br', 'gz'],
     setHeaders: (res, path) => {
         res.setHeader('Cache-Control', 'public, max-age=31536000');
-        res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+        // res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
     }
 }));
 server.use('/api-v1/categories', categoryRouter);
