@@ -23,10 +23,10 @@
             ul {
                 padding-left: 0.5rem;
                 li:hover {
-                    background: map-get($map: $color, $key: dark);
+                    // background: map-get($map: $color, $key: dark);
                 }
                 li:hover a {
-                    color: map-get($map: $color, $key: light);
+                    // color: map-get($map: $color, $key: light);
                 }
             }
         }

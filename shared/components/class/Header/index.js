@@ -18,13 +18,20 @@ class HeaderComponent extends React.Component {
                 <div>
                     <DrawerToggleButton click={this.props.drawerClickHandler}/>
                 </div>
-                <div className="d-logo"><Link to="/" arial-label="Home Page"><img src="/images/anonymous.png" alt="" /></Link></div>
+                <div className="d-logo"><Link to="/" aria-label="Home Page"><img src="/images/anonymous.png" alt="" /></Link></div>
                 <div className="spacer" />
                 <ul className="d-menu-main">
-                    <li><Link to="/" arial-label="Home Page">Home</Link></li>
+                    <li><Link to="/" aria-label="Home Page">Home</Link></li>
                     {
                         data.map(category => (
-                            <li key={category._id}><Link to={`/posts/${category._id}`} arial-label="Category Page">{category.name}</Link></li>
+                            <li key={category._id}>
+                                <Link 
+                                    to={`/posts/${category._id}`} 
+                                    aria-label="Category Page"
+                                >
+                                    {category.name}
+                                </Link>
+                            </li>
                         ))
                     }
                 </ul>

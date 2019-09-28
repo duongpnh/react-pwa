@@ -3,58 +3,41 @@
 .d-posts {
     width: 70%;
     margin: 0 auto;
-    .d-posts-left {
-        float: left;
-        width: 60%;
-        .d-posts-left-new-subject {
-            background: map-get($map: $color, $key: primary);
-            padding: 1rem;
-            h3 {
-                color: map-get($map: $color, $key: textPrimaryH3);
-            }
-            a {
-                color: map-get($map: $color, $key: textReadMore);
-            }
-            a:hover {
-                color: map-get($map: $color, $key: textHover);
-            }
+    ul {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        li:not(:last-child) {
+            margin: 0 0 0.5rem 0;
         }
-        .d-posts-left-new-subject img {
-            position: relative;
-            width: 100%;
-        }
-    }
-
-    .d-posts-right {
-        float: left;
-        width: 40%;
-        ul {
-            margin: 0 0 0 1rem;
-            padding: 0;
-            li:not(:last-child) {
-                margin: 0 0 0.5rem 0;
+        li {
+            list-style: none;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background: map-get($map: $color, $key: light);
+            border: 8px solid map-get($map: $color, $key: borderColor);
+            img {
+                flex: 1;
+                padding: 1rem;
+                width: 0%;
             }
-            li {
-                list-style: none;
-                display: flex;
-                align-items: center;
-                background: map-get($map: $color, $key: primary);
-                .LazyLoad {
-                    max-width: 30%;
-                    padding: 1rem;
-                    img {
-                        max-width: 100%;
-                    }
-                }
+            .d-posts-content-item {
+                flex-basis: 80%;
                 p {
-                    max-width: 70%;
+                    max-width: 100%;
                 }
                 a {
                     font-size: 0.8rem;
-                    color: map-get($map: $color, $key: textReadMore);
+                    text-decoration: none;
+                    color: map-get($map: $color, $key: dark);
                 }
                 a:hover {
-                    color: map-get($map: $color, $key: textHover);
+                    color: map-get($map: $color, $key: primary);
                 }
             }
         }
@@ -64,17 +47,11 @@
 @media (max-width: 991px) {
     .d-posts {
         width: 100%;
-        .d-posts-left {
-            width: 100%;
-        }
-        .d-posts-right {
-            width: 100%;
-            ul {
-                margin: 0;
-                li:first-child {
-                    margin-top: 0.5rem;
-                }
-            }
-        }
+    }
+}
+
+@media (max-width: 360px) {
+    .d-posts {
+        width: 100%;
     }
 }

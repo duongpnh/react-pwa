@@ -9,9 +9,11 @@
     "yarn": "1.17.3"
   },
   "scripts": {
-    "start": "webpack --config webpack.dev.js && node ./server/run.js",
+    "start": "webpack --config webpack.prod.js && node ./server/run.js",
     "server:dev": "nodemon -r esm ./server/run.js",
-    "start:dev": "webpack-dev-server --config webpack.dev.js --open google-chrome"
+    "start:dev": "webpack-dev-server --config webpack.dev.js --open google-chrome",
+    "test": "jest --config ./jest.config.json",
+    "test:watch": "npm run test -- --watch"
   },
   "keywords": [],
   "author": "",
@@ -31,7 +33,11 @@
     "cors": "^2.8.5",
     "css-loader": "^3.2.0",
     "dotenv": "^8.1.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "esm": "^3.2.25",
+    "jest": "^24.9.0",
+    "jest-enzyme": "^7.1.1",
     "mini-css-extract-plugin": "^0.8.0",
     "mongoose": "^5.6.11",
     "nodemon": "^1.19.1",
@@ -75,5 +81,17 @@
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
     "sass-loader": "^8.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

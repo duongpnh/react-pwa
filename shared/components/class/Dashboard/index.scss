@@ -1,17 +1,57 @@
 @import '../../App.scss';
 
+// Head container 
+.d-head-container {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: map-get($map: $color, $key: primary);
+  color: map-get($map: $color, $key: primary);
+  letter-spacing: 3px;
+  font-weight: 100;
+  font-size: 1.5rem;
+  h1 {
+    color: map-get($map: $color, $key: light);
+  }
+  button.d-hire-me {
+    background: map-get($map: $color, $key: secondary);
+    color: map-get($map: $color, $key: textPrimaryColor);
+    border: none;
+    outline: none;
+    padding: 10px 3rem;
+    border-radius: 5px; 
+    box-shadow: 0 0 0 2px map-get($map: $color, $key: secondaryHSL);
+  }
+  button.d-hire-me:hover,
+  button.d-hire-me:focus {
+    box-shadow: 0 0 0 2px map-get($map: $color, $key: primaryHSL);
+    background-color: map-get($map: $color, $key: light);
+    color: map-get($map: $color, $key: dark);
+  }
+}
+
 // Top container
 .d-top-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  padding: 1rem;
   // Show case
   .showcase {
-    width: 60%;
+    flex: 1;
     padding: 1rem;
     margin: 1rem;
-    color: map-get($map: $color, $key: light);
-    background: map-get($map: $color, $key: primary);
-
+    background: map-get($map: $color, $key: light);
+    border: 8px solid map-get($map: $color, $key: borderColor);
+    box-sizing: border-box;
     .poster {
       position: relative;
       overflow: hidden;
@@ -31,38 +71,37 @@
       position: relative;
       padding: 20px;
       width: 100%;
-      height: 100%;
       box-sizing: border-box;
       h1 {
         font-size: 3rem;
         margin-bottom: 0;
-        color: map-get($map: $color, $key: textPrimaryH1);
+        color: map-get($map: $color, $key: primary);
       }
       p {
         font-size: 1.3rem;
         margin-top: 0;
-        color: map-get($map: $color, $key: descriptionTextColor);
       }
       a {
-        color: map-get($map: $color, $key: textReadMore);
+        text-decoration: none;
+        color: map-get($map: $color, $key: dark);
       }
       a:hover {
-        color: map-get($map: $color, $key: textHover);
+        color: map-get($map: $color, $key: primary);
       }
     }
   }
   // Top box
   .d-top-box {
-    width: 40%;
+    flex-basis: 40%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 1rem;
 
     .d-top-box-a {
-      background: map-get($map: $color, $key: primary);
+      border: 8px solid map-get($map: $color, $key: borderColor);
+      background: map-get($map: $color, $key: light);
       padding: 1rem;
-      color: map-get($map: $color, $key: textPrimaryH4);
       display: flex;
       flex-direction: row;
       width: 100%;
@@ -81,11 +120,15 @@
       }
       .d-top-box-a-text {
         width: 70%;
+        h4 {
+          color: map-get($map: $color, $key: primary);
+        }
         a {
-          color: map-get($map: $color, $key: textReadMore);
+          text-decoration: none;
+          color: map-get($map: $color, $key: dark);
         }
         a:hover {
-          color: map-get($map: $color, $key: textHover);
+          color: map-get($map: $color, $key: primary);
         }
       }
     }

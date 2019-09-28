@@ -11,9 +11,7 @@ export default (content, preloadedState) => {
                 <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
                 <link type="text/css" rel="shortcut icon" href="/images/anonymous.png" />
                 <title>Anonymous</title>
-                <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-                <link type="text/css" href="https://fonts.googleapis.com/css?family=Poppins:500&display=swap" rel="stylesheet" />
-                <link type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+                <link type="text/css" href="/css/font-awesome.min.css" rel="stylesheet" />
                 <link type="text/css" href="/css/app.css" rel="stylesheet">
             </head>
             <body>

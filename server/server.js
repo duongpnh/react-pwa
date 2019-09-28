@@ -18,13 +18,14 @@ server.use(cors({
 server.use(express.json());
 // Support URL encoded in request body
 server.use(express.urlencoded({ extended: false }));
-server.use((req, res, next) => {
-    if (!/https/.test(req.protocol)) {
-        res.redirect(`https://${req.headers.host}${req.url}`);
-    } else {
-        return next();
-    }
-})
+// server.use((req, res, next) => {
+//     if (!/https/.test(req.protocol)) {
+//         console.log(req.headers.host, req.url);
+//         // res.redirect(`https://${req.headers.host}${req.url}`);
+//     } else {
+//         return next();
+//     }
+// })
 server.use('/api-v1', router);
 // server.use('/api-v1/users', userRouter);
 // Make sure file in public folder working

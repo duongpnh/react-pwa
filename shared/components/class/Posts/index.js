@@ -11,27 +11,11 @@ class Posts extends React.Component {
     render() {
         const {posts} = this.props;
         if (posts && posts.length > 0) {
-            const newPost = posts[0];
-            const remainPosts = newPost ? posts.filter(p => p._id !== newPost._id) : null;
             return (
                 <div className="d-posts">
-                    <div className="d-posts-left">
-                        <div className="d-posts-left-new-subject">
-                            <img src={newPost ? newPost.image : ''} alt=""/>
-                            <h3>{newPost ? newPost.title : ''}</h3>
-                            <Link 
-                                arial-label="Details Post" 
-                                to={`/categories/${newPost.category_id}/posts/${newPost ? newPost._id : ''}/details`}
-                            >
-                                Read more
-                            </Link>
-                        </div>
-                    </div>
-                    <div className="d-posts-right">
-                        {
-                            <RemainPosts remainPosts={remainPosts}/>
-                        }
-                    </div>
+                    {
+                        <RemainPosts remainPosts={posts}/>
+                    }
                 </div>
             );
         }

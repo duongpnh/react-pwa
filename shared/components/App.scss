@@ -1,36 +1,12 @@
 $color: (
-    primary: #F1F2F3,
+    primary: #1C56C0,
+    primaryHSL: hsl(218, 56%, 61%),
+    secondary: #4C4C4D,
+    secondaryHSL: hsl(0, 0%, 54%),
+    textPrimaryColor: #DCDCDC,
+    textSecondaryColor: #7a7a7a, 
+    light: #fff,
+    bgHeader: rgba(255, 255, 255, .95),
     dark: #333,
-    light: #68A225,
-    shadow: 0 1px 5px rgba(104, 104, 104, 0.8),
-    empty: transparent,
-    textHover: #042A2B,
-    darkPrimary: #F1F2F3,
-    superBlack: #000000,
-    textPrimaryH1: rgba(38, 92, 0, 1),
-    textPrimaryH3: rgba(38, 92, 0, 1),
-    textPrimaryH4: rgba(38, 92, 0, 0.8),
-    descriptionTextColor: #555555,
-    textReadMore: #68A225
+    borderColor: #edf2f7
 );
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    font-family: 'Poppins';
-    margin: 0 auto;
-    width: 100%;
-}
-@media (max-width: 700px) {
-    body {
-        width: 100%;
-    }
-}
-
-a {
-    text-decoration: none;
-    color: map-get($map: $color, $key: dark);
-}
-a:hover {
-    color: map-get($map: $color, $key: textHover);
-}

@@ -1,4 +1,3 @@
-import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import ModelCategory from '../models/category';
 import config from '../configs';

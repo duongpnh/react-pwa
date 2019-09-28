@@ -5,16 +5,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: map-get($map: $color, $key: dark);
+    background-color: map-get($map: $color, $key: secondary);
     text-align: center;
     bottom: 0;
     span {
         font-size: 1rem;
         font-weight: 100;
         line-height: 3rem;
-        color: map-get($map: $color, $key: primary);
+        color: map-get($map: $color, $key: textPrimaryColor);
     }
     p {
-        color: map-get($map: $color, $key: descriptionTextColor);
+        color: map-get($map: $color, $key: textPrimaryColor);
     }
 }

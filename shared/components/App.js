@@ -46,7 +46,7 @@ class App extends React.Component {
                         show={this.state.sideDrawerOpen}
                     />
                     {backdrop}
-                    <main style={{marginTop: '64px'}}>
+                    <main style={{marginTop: '60px'}}>
                         <ContentComponent />
                     </main>
                     <FooterComponent />

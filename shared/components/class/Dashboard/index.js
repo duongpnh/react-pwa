@@ -15,8 +15,12 @@ class Dashboard extends Component {
             const remainPost = newestPosts.filter(p => p._id !== newestPosts[0]._id);
             return (
                 <div className="wrapper">
+                    <section className="d-head-container">
+                        <h1>Welcome to Anonymous Blog</h1>
+                        <button class="d-hire-me">Hire me</button>
+                    </section>
                     <section className="d-top-container">
-                        <header className="showcase animated bounceInLeft">
+                        <header className="showcase">
                             <div className="poster">
                                 <LazyLoad>
                                     <ImageLoader src={newestPosts && newestPosts[0].image}/>
@@ -27,7 +31,13 @@ class Dashboard extends Component {
                                     {newestPosts && newestPosts[0].title}
                                 </h1>
                                 <p>{newestPosts && newestPosts[0].description}</p>
-                                <Link arial-label="Details Post" to={`/categories/${newestPosts[0].category_id}/posts/${newestPosts[0]._id}/details`} className="btn">Read More</Link>
+                                <Link 
+                                    aria-label="Details Post" 
+                                    to={`/categories/${newestPosts[0].category_id}/posts/${newestPosts[0]._id}/details`} 
+                                    className="btn"
+                                >
+                                    Read More
+                                </Link>
                             </div>
                         </header>
                         <div className="d-top-box">

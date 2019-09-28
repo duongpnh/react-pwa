@@ -8,15 +8,15 @@ nav.d-header {
     height: 60px;
     display: flex;
     align-items: center;
-    background: rgba(255, 255, 255, .95);
+    background: map-get($map: $color, $key: bgHeader);
     z-index: 1;
     padding: 0 1rem;
     box-sizing: border-box;
-}
-nav .d-logo {
-    font-size: 30px;
-    a {
-        display: flex;
+    .d-logo {
+        font-size: 30px;
+        a {
+            display: flex;
+        }
     }
 }
 ul.d-menu-main {
@@ -37,9 +37,9 @@ ul.d-menu-main li a {
     color: #000;
 }
 ul.d-menu-main li:hover {
-    background: map-get($map: $color, $key: textHover);
+    background: map-get($map: $color, $key: primary);
 }
-ul.d-menu-main li:hover a {
+ul.d-menu-main li:hover a{
     color: map-get($map: $color, $key: light);
 }
 @media (max-width: 991px) {
