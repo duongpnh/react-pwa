@@ -3,16 +3,12 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './index.scss';
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
-import Loading from '../../../common/Loading';
 import { getCates } from '../../../actions/categories';
 
 class HeaderComponent extends React.Component {
 
     render() {
-        const { categories : { isFetching, data } } = this.props;
-        if (isFetching) {
-            return <Loading />
-        }
+        const { categories : { data } } = this.props;
         return (
             <nav className="d-header">
                 <div>
@@ -37,6 +33,7 @@ class HeaderComponent extends React.Component {
                 </ul>
             </nav>
         );
+        
     }
 }
 

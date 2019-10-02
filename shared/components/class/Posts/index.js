@@ -1,29 +1,30 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import './index.scss';
 import { getPosts } from '../../../actions/posts';
 import RemainPosts from './items';
+import Loading from '../../../common/Loading';
 
 
 class Posts extends React.Component {
 
     render() {
         const {posts} = this.props;
-        if (posts && posts.length > 0) {
+        if (posts.data && posts.data.length > 0) {
             return (
                 <div className="d-posts">
                     {
-                        <RemainPosts remainPosts={posts}/>
+                        <RemainPosts remainPosts={posts.data}/>
                     }
                 </div>
             );
+        } else {
+            return <Loading />
         }
-        return null;
     }
 
     componentDidMount() {
-        if (!this.props.posts || this.props.posts.length === 0) {
+        if (!this.props.posts.data || this.props.posts.data.length === 0) {
             this.props.getPosts(this.props.match.params.cname);
         }
     }
@@ -38,7 +39,7 @@ class Posts extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        posts: state.posts.data.categoryId ? state.posts.data.data : []
+        posts: state.posts.data.categoryId ? state.posts.data : {}
     }
 }
 

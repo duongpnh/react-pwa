@@ -14,6 +14,7 @@
   font-size: 1.5rem;
   h1 {
     color: map-get($map: $color, $key: light);
+    text-align: center;
   }
   button.d-hire-me {
     background: map-get($map: $color, $key: secondary);
@@ -78,7 +79,7 @@
         color: map-get($map: $color, $key: primary);
       }
       p {
-        font-size: 1.3rem;
+        line-height: 1.6rem;
         margin-top: 0;
       }
       a {
@@ -122,6 +123,7 @@
         width: 70%;
         h4 {
           color: map-get($map: $color, $key: primary);
+          line-height: 1.6rem;
         }
         a {
           text-decoration: none;
@@ -204,6 +206,7 @@
         }
         p {
           font-size: 1rem;
+          line-height: 1.6rem;
         }
       }
     }
@@ -223,6 +226,7 @@
           width: 100%;
           h4 {
             font-size: 1rem;
+            line-height: 1.6rem;
           }
         }
       }

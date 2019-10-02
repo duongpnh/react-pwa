@@ -56,7 +56,8 @@ module.exports = {
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin([
             { from: 'assets', to: '' },
-            { from: 'client/sw.js', to: ''}
+            { from: 'client/sw.js', to: ''},
+            { from: 'client/serviceWorker.js', to: ''}
         ]),
         new CompressionPlugin({
             filename: '[path].br[query]',

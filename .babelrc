@@ -12,6 +12,7 @@
     ],
     "plugins": [
         "@babel/plugin-syntax-dynamic-import",
+        "@babel/plugin-transform-named-capturing-groups-regex",
         ["@babel/plugin-proposal-decorators", { "legacy": true }],
         ["@babel/plugin-proposal-class-properties", { "loose": false }],
         "@babel/plugin-proposal-object-rest-spread" // Fix bug IE: SCRIPT1028: SCRIPT1028: Expected identifier, string or number bundle

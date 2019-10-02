@@ -55,7 +55,7 @@ class App extends React.Component {
 
         return (
             <div style={{height: '100%'}}>
-                    {app}
+                {app}
             </div>
         );
     }

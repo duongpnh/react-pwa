@@ -20,10 +20,10 @@ class SideDrawer extends React.Component {
         const drawerClass = this.props.show ? `${this.state.drawerClasses} open` : this.state.drawerClasses;
         return (
             <nav className={drawerClass}>
-                <ul>
+                <ul className="d-menu-sidedrawer">
                     <li>
                         <Link to="/" arial-label="Home Page">Categories</Link>
-                        <ul>
+                        <ul className="d-inner-items">
                             {
                                 data.map(category => (
                                     <li key={category._id}><Link to={`/posts/${category._id}`} arial-label="Category Page">{category.name}</Link></li>

@@ -12,10 +12,11 @@ export default {
 };
 // Config mongo database
 // const mongoDB = 'mongodb://192.168.88.181:27017/fullstack';
-const mongoDB = 'mongodb+srv://pnhduong:xxx@cluster0-euugq.mongodb.net/fullstack?retryWrites=true&w=majority';
+const mongoDB = 'mongodb+srv://pnhduong:12110116@cluster0-euugq.mongodb.net/fullstack?retryWrites=true&w=majority';
 mongoose.connect(mongoDB, {
     useNewUrlParser: true,
-    useCreateIndex: true
+    useCreateIndex: true,
+    useUnifiedTopology: true
 });
 
 const db = mongoose.connection;

@@ -17,7 +17,7 @@ class Dashboard extends Component {
                 <div className="wrapper">
                     <section className="d-head-container">
                         <h1>Welcome to Anonymous Blog</h1>
-                        <button class="d-hire-me">Hire me</button>
+                        <button className="d-hire-me">Hire me</button>
                     </section>
                     <section className="d-top-container">
                         <header className="showcase">
