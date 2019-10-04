@@ -1,11 +1,13 @@
-import React, {Component} from 'react';
+import React, {Component, lazy, Suspense} from 'react';
 import { connect } from 'react-redux';
 import './index.scss';
 import LazyLoad from 'react-lazy-load';
-import ImageLoader from '../../functional/ImageLoader';
-import RemainPostDashboard from './items';
 import { getPosts } from '../../../actions/posts';
 import { Link } from 'react-router-dom';
+
+
+const ImageLoader = lazy(() => import('../../functional/ImageLoader'));
+const RemainPostDashboard = lazy(() => import('./items'));
 
 class Dashboard extends Component {
 
@@ -22,9 +24,11 @@ class Dashboard extends Component {
                     <section className="d-top-container">
                         <header className="showcase">
                             <div className="poster">
+                                <Suspense fallback={<div>Loading...</div>}>
                                 <LazyLoad>
                                     <ImageLoader src={newestPosts && newestPosts[0].image}/>
                                 </LazyLoad>
+                                </Suspense>
                             </div>
                             <div className="details">
                                 <h1>
@@ -41,9 +45,9 @@ class Dashboard extends Component {
                             </div>
                         </header>
                         <div className="d-top-box">
-                            {
+                            <Suspense fallback={<div>Loading...</div>}>
                                 <RemainPostDashboard remainPost={remainPost} />
-                            }
+                            </Suspense>
                         </div>
                     </section>
                 </div>

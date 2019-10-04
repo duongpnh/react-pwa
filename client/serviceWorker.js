@@ -13,5 +13,18 @@ if ('serviceWorker' in navigator) {
         reg.active.postMessage(data);
       })
       .catch(err => console.log(`Error: ${err}`));
+    
+    window.addEventListener('beforeinstallprompt', (e) => {
+      console.log('beforeinstallprompt event fired');
+      e.preventDefault();
+      e.prompt();
+      e.userChoice.then(choice => {
+          if (choice.outcome === 'accepted') {
+              console.log('User accepted the A2HS prompt');
+          } else {
+              console.log('User dismissed the A2HS prompt');
+          }
+      })
+    });
   })
 }

@@ -10,6 +10,10 @@ export default (content, preloadedState) => {
                 <meta name="viewport" content="width=device-width,initial-scale=1" />
                 <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
                 <link type="text/css" rel="shortcut icon" href="/images/anonymous.png" />
+                <!-- Tell the browser it's a PWA -->
+                <meta name="mobile-web-app-capable" content="yes">
+                <!-- Tell iOS it's a PWA -->
+                <meta name="apple-mobile-web-app-capable" content="yes">
                 <title>Anonymous</title>
                 <link type="text/css" href="/css/font-awesome.min.css" rel="stylesheet" />
                 <link type="text/css" href="/css/app.css" rel="stylesheet">
